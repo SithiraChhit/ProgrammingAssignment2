@@ -22,8 +22,17 @@ get <- function() x {
 }
 
 
-## Write a short comment describing this function
+## This function is to return the inverse matrix
 
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
+        inv <- x$getInverse()
+        if(!is.NULL(inv)) {
+                message("Get catched data!")
+                return(inv)
+        }
+        mat <- x$get()
+        inv <- solve(mat, ...)
+        x$setInverse(inv)
+        inv
 }
