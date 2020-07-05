@@ -8,8 +8,8 @@ inv <- NULL
 set <- function(y) {
         x <<- y
         inv <<- NULL
-}
-get <- function() x {
+        }
+get <- function() x
         setInverse <- function(inverse) inv <<- inverse
         getInverse <- function() inv
         list(
@@ -18,7 +18,6 @@ get <- function() x {
                 setInverse = setInverse,
                 getInverse = getInverse
         )
-}
 }
 
 
